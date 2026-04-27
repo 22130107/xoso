@@ -5,6 +5,22 @@ import './thongke.css'
 
 const BASE_API = '/api'
 
+// ─── In-Memory Cache ─────────────────────────────────────────────────────────
+const dataCache = new Map<string, { data: any; timestamp: number }>()
+const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
+
+function getCachedData(key: string) {
+  const cached = dataCache.get(key)
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+    return cached.data
+  }
+  return null
+}
+
+function setCachedData(key: string, data: any) {
+  dataCache.set(key, { data, timestamp: Date.now() })
+}
+
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface Province {
   title: string
@@ -1327,19 +1343,56 @@ function App() {
   const dayTabsRef = useRef<HTMLUListElement>(null)
 
   const fetchStats = useCallback(async (region: string, day: string) => {
+    // Check cache first
+    const ds = daySlug(day)
+    const cacheKey = `stats:${regionSlug(region)}:${ds || 'today'}`
+    const cached = getCachedData(cacheKey)
+    
+    if (cached) {
+      console.log('📦 Using cached stats for:', region, day)
+      setStats(cached)
+      setStatsLoading(false)
+      return
+    }
+    
     setStatsLoading(true)
     setStats(null)
     try {
-      const ds = daySlug(day)
       const url = `${BASE_API}/stats?region=${regionSlug(region)}${ds ? `&day=${ds}` : ''}`
       const res = await fetch(url)
       const data = await res.json()
-      if (data.ok) setStats(data)
+      if (data.ok) {
+        setStats(data)
+        setCachedData(cacheKey, data) // Cache the stats
+      }
     } catch { /* fail silently */ }
     finally { setStatsLoading(false) }
   }, [])
 
   const fetchResult = useCallback(async (path: string, title: string, region: string, day: string) => {
+    // Check cache first
+    const cacheKey = `result:${path}`
+    const cached = getCachedData(cacheKey)
+    
+    if (cached) {
+      console.log('📦 Using cached data for:', path)
+      setActiveTitle(title)
+      setActiveRegion(region)
+      setActiveDay(day)
+      setResultData(cached)
+      setLoading(false)
+      setError('')
+      
+      // Update document title
+      const regionCode = region === 'Miền Bắc' ? 'XSMB' : region === 'Miền Trung' ? 'XSMT' : 'XSMN'
+      const dayText = day === 'Hôm nay' ? 'Hôm Nay' : day
+      document.title = `${regionCode} ${dayText} - ${title} | XSKT`
+      
+      // Fetch stats (may also be cached)
+      fetchStats(region, day)
+      return
+    }
+    
     setActiveTitle(title)
     setActiveRegion(region)
     setActiveDay(day)
@@ -1363,6 +1416,7 @@ function App() {
       const data = await res.json()
       if (data.ok && data.provinces) {
         setResultData(data)
+        setCachedData(cacheKey, data) // Cache the result
       } else {
         setError('Không thể tải dữ liệu. Vui lòng thử lại.')
       }
