@@ -1,0 +1,1552 @@
+/* ─── THỐNG KÊ PAGE ─── */
+.thongke-page {
+  background: #fff;
+}
+
+/* Tabs */
+.thongke-content ul.tab-panel {
+  display: flex;
+  background: #f1f1f1;
+  border-bottom: 2px solid #0059A9;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  margin-bottom: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.thongke-content ul.tab-panel li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.thongke-content ul.tab-panel li:last-child {
+  border-right: none;
+}
+
+.thongke-content ul.tab-panel li a {
+  display: block;
+  padding: 10px 6px;
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.thongke-content ul.tab-panel li.active {
+  background: #0059A9;
+}
+
+.thongke-content ul.tab-panel li.active a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.thongke-content ul.tab-panel li:not(.active):hover {
+  background: #e5e5e5;
+}
+
+/* Boxes */
+.thongke-content .box {
+  margin-bottom: 20px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Titles */
+.thongke-content .title-bor-c1 {
+  background-color: #cf4f00;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Control Panel with Radio Buttons */
+.thongke-content .control_panel {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  border-top: 1px solid #e4e4e4;
+  background: #fdfdfd;
+}
+
+.thongke-content .control_panel label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+}
+
+.thongke-content .control_panel input[type="radio"] {
+  margin: 0;
+  accent-color: #cf4f00;
+}
+
+/* Box form "TK 2 số cuối" */
+.thongke-content .box-tk-top {
+  background: #cf4f00;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.thongke-content .box-tk-top select {
+  padding: 4px;
+  margin: 0 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.thongke-content .box-tk-top input[type="submit"] {
+  padding: 4px 12px;
+  background: #fff;
+  color: #cf4f00;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Tables */
+.thongke-content table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.thongke-content table th,
+.thongke-content .title-table {
+  background: #f7e9be;
+  color: #333;
+  padding: 8px;
+  border: 1px solid #e4e4e4;
+  font-weight: bold;
+}
+
+.thongke-content .title-table {
+  color: #cf4f00;
+  margin: 0;
+  display: block;
+  font-size: 14px;
+}
+
+.thongke-content table td {
+  padding: 8px;
+  border: 1px solid #e4e4e4;
+  vertical-align: middle;
+  background: #fff;
+}
+
+/* TK 2 so cuoi compact layout */
+.thongke-content form > .box-with-border.tk-db {
+  overflow: hidden;
+  margin: 6px 0 14px;
+  border: 1px solid #cf4f00;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.thongke-content form > .box-with-border.tk-db .title-bor-c1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 43px;
+  padding: 6px 10px;
+  background: #d94b00;
+  color: #fff;
+  text-transform: none;
+}
+
+.thongke-content form > .box-with-border.tk-db .title-bor-c1 strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.thongke-content form > .box-with-border.tk-db .title-bor-c1 select {
+  height: 29px;
+  min-width: 64px;
+  padding: 2px 26px 2px 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 0;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.thongke-content form > .box-with-border.tk-db .txt-center.pad5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px;
+  background: #fffaf0;
+  color: #d94b00;
+  font-size: 13px;
+}
+
+.thongke-content form > .box-with-border.tk-db .txt-center.pad5 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #ffe983;
+  color: #000;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.thongke-content form > .box-with-border.tk-db .title-bor {
+  margin: 0;
+  padding: 8px 10px;
+  background: #f7e9be;
+  border-top: 1px solid #eadca9;
+  border-bottom: 1px solid #e4e4e4;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.thongke-content form > .box-with-border.tk-db > .clearfix {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.thongke-content form > .box-with-border.tk-db > .clearfix::before,
+.thongke-content form > .box-with-border.tk-db > .clearfix::after {
+  content: none;
+}
+
+.thongke-content form > .box-with-border.tk-db > .clearfix table.colgiai {
+  width: 100%;
+  min-width: 0;
+  float: none;
+  table-layout: fixed;
+}
+
+.thongke-content form > .box-with-border.tk-db > .clearfix table.colgiai + table.colgiai {
+  border-left: 1px solid #d8d8d8;
+}
+
+.thongke-content form > .box-with-border.tk-db table.colgiai th {
+  padding: 6px 8px;
+  background: #f5f5f5;
+  color: #000;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.thongke-content form > .box-with-border.tk-db table.colgiai td {
+  padding: 5px 8px !important;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.thongke-content form > .box-with-border.tk-db table.colgiai tr:nth-child(even) td {
+  background: #fff;
+}
+
+.thongke-content form > .box-with-border.tk-db .clred,
+.thongke-content form > .box-with-border.tk-db .clnote {
+  color: #e04400;
+}
+
+.thongke-content form > .box-with-border.tk-db table.colgiai .clred.bold {
+  font-size: 14px;
+}
+
+.thongke-content form > .box-with-border.tk-db .dauduoi-lauchuave .list-unstyle {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thongke-content form > .box-with-border.tk-db .dauduoi-lauchuave .list-unstyle li {
+  min-height: 31px;
+  padding: 7px 8px;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  background: #fff;
+  color: #000;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.thongke-content form > .box-with-border.tk-db .dauduoi-lauchuave .list-unstyle li:nth-child(5n) {
+  border-right: none;
+}
+
+@media (max-width: 700px) {
+  .thongke-content form > .box-with-border.tk-db > .clearfix,
+  .thongke-content form > .box-with-border.tk-db .dauduoi-lauchuave .list-unstyle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .thongke-content form > .box-with-border.tk-db .dauduoi-lauchuave .list-unstyle li:nth-child(5n) {
+    border-right: 1px solid #e4e4e4;
+  }
+
+  .thongke-content form > .box-with-border.tk-db .dauduoi-lauchuave .list-unstyle li:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+.thongke-content table.colgiai tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* Special number styling */
+.thongke-content table td.clnote,
+.thongke-content table td .clnote,
+.thongke-content table td.cl-red,
+.thongke-content table td .cl-red {
+  color: #cf4f00;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.thongke-content table td .date,
+.thongke-content table td.date {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.thongke-content table td.bold {
+  font-weight: bold;
+}
+
+/* Links lists */
+.thongke-content .list-link {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.thongke-content .list-link li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.thongke-content .list-link li::before {
+  content: '•';
+  color: #cf4f00;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+}
+
+.thongke-content .list-link a {
+  color: #0059A9;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.thongke-content .list-link a:hover {
+  text-decoration: underline;
+  color: #cf4f00;
+}
+
+/* SEO Content */
+.thongke-content .thong-tin {
+  padding: 15px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+}
+
+.thongke-content .thong-tin a {
+  color: #cf4f00;
+  font-weight: bold;
+}
+
+/* Hide native stats by default, JS will show them based on filters */
+.thongke-content .dau,
+.thongke-content .duoi,
+.thongke-content .tong,
+.thongke-content .odd-sum,
+.thongke-content .even-sum {
+  display: none;
+}
+
+/* Native filter rows placed under each scraped stats table */
+.thongke-content .toggle-buttons {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 8px 12px;
+  margin: 0 auto;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.thongke-content .toggle-buttons .toggle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 30px;
+  padding: 5px 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  color: #555;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  user-select: none;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.thongke-content .toggle-buttons .toggle-button:hover {
+  border-color: #cf4f00;
+  background: #fffcf9;
+}
+
+.thongke-content .toggle-buttons .toggle-button input {
+  display: none !important;
+}
+
+.thongke-content .toggle-buttons .toggle-button .lbl1 {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+  margin: 0;
+  background: #e0e0e0;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.thongke-content .toggle-buttons .toggle-button .lbl1::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.thongke-content .toggle-buttons .toggle-button.active {
+  border-color: #cf4f00;
+  background: #fff8f4;
+  color: #cf4f00;
+}
+
+.thongke-content .toggle-buttons .toggle-button.active .lbl1 {
+  background: #cf4f00;
+}
+
+.thongke-content .toggle-buttons .toggle-button.active .lbl1::after {
+  transform: translateX(16px);
+}
+
+.thongke-content .toggle-buttons .toggle-button-label {
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.thongke-content .loto-gan-table-controls {
+  padding: 8px 10px;
+  background: #fff;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.thongke-content .loto-gan-control-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thongke-content .loto-gan-control-row .button-menu {
+  display: inline-flex;
+  gap: 6px;
+  padding: 0;
+}
+
+.thongke-content .loto-gan-control-row .button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.thongke-content .loto-gan-control-row .button input {
+  display: none;
+}
+
+.thongke-content .loto-gan-control-row .button label {
+  min-height: 28px;
+  padding: 5px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  background: #fff;
+  color: #555;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.thongke-content .loto-gan-control-row .button.active label {
+  border-color: #cf4f00;
+  background: #fff8f4;
+  color: #cf4f00;
+}
+
+/* Lo gan page */
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) ul.tab-panel {
+  margin: 0;
+  border: 1px solid #d8d8d8;
+  border-bottom: none;
+  border-radius: 0;
+  background: #eee;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) ul.tab-panel li {
+  border-right: 1px solid #d3d3d3;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) ul.tab-panel li a {
+  padding: 11px 6px;
+  color: #333;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) ul.tab-panel li.active {
+  background: #d94b00;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) ul.tab-panel li.active a {
+  color: #fff;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .box {
+  margin: 0 0 10px;
+  border: 1px solid #d94b00;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .box:first-of-type {
+  border-top: none;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .box .title-bor-c1 {
+  padding: 10px;
+  background: #d94b00;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .box .title-bor-c1 a {
+  color: #fff;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+  padding: 8px 6px 28px;
+  background: #fff;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu .a-third {
+  min-width: 0;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu .bold {
+  display: block;
+  margin-bottom: 4px;
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu select {
+  width: 100%;
+  height: 30px;
+  padding: 3px 8px;
+  border: 1px solid #cfcfcf;
+  border-radius: 0;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu button,
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu .btn {
+  min-width: 48px;
+  height: 31px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 3px;
+  background: #d94b00;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .box:first-of-type .txt-center.pad5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px 14px;
+  color: #d94b00;
+  font-size: 13px;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .box:first-of-type .txt-center.pad5 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #ffe983;
+  color: #000;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-table-controls {
+  padding: 9px 6px;
+  border-bottom: none;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row {
+  justify-content: space-between;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row .button-menu {
+  gap: 4px;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row .button label {
+  min-width: 50px;
+  min-height: 23px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row .button.active label {
+  border-color: #d94b00;
+  background: #d94b00;
+  color: #fff;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row .toggle-buttons {
+  padding: 0;
+  border: none;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row .toggle-button {
+  min-height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #000;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table {
+  table-layout: fixed;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table tr.header td {
+  padding: 10px 8px !important;
+  background: #f7e9be;
+  color: #000;
+  font-weight: 700;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table td {
+  padding: 9px 8px !important;
+  color: #001632;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table tr:nth-child(even) td {
+  background: #fff;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table .bold {
+  font-weight: 700;
+}
+
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table .cl-orange,
+.thongke-content:has(form#statistic-form[action*="lo-gan"]) #loto-gan-statistic-table strong {
+  color: #e04400;
+}
+
+/* Trial roll page */
+.thongke-content .trial-roll-tab {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d8d8d8;
+  border-bottom: none;
+  list-style: none;
+  background: #eee;
+}
+
+.thongke-content .trial-roll-tab li {
+  flex: 1;
+  border-right: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+.thongke-content .trial-roll-tab li:last-child {
+  border-right: none;
+}
+
+.thongke-content .trial-roll-tab li a {
+  display: block;
+  padding: 11px 6px;
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.thongke-content .trial-roll-tab li.active {
+  background: #d94b00;
+}
+
+.thongke-content .trial-roll-tab li.active a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.thongke-content .quay-thu {
+  border: 1px solid #d94b00;
+  background: #fff;
+}
+
+.thongke-content .quay-thu .title-bor-c1 {
+  padding: 10px;
+  background: #d94b00;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.3;
+  text-transform: none;
+}
+
+.thongke-content .quay-thu .title-bor-c1 a {
+  color: #fff;
+}
+
+.thongke-content .quay-thu #trial_form > .center:first-of-type {
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.thongke-content .quay-thu #trial_form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thongke-content .quay-thu #trial_form li {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thongke-content .quay-thu #province_name {
+  width: min(270px, 65vw);
+  height: 31px;
+  padding: 3px 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+}
+
+.thongke-content .quay-thu .trial-button {
+  min-width: 72px;
+  height: 31px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 3px;
+  background: #d94b00;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.thongke-content .quay-thu #trial_form .txt-center.pad5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px 14px;
+  color: #d94b00;
+  font-size: 13px;
+}
+
+.thongke-content .quay-thu #trial_form .txt-center.pad5 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #ffe983;
+  color: #000;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.thongke-content .quay-thu .one-city {
+  border-top: 1px solid #d94b00;
+}
+
+.thongke-content .quay-thu table.kqmb {
+  table-layout: fixed;
+}
+
+.thongke-content .quay-thu table.kqmb td {
+  padding: 9px 8px !important;
+  font-size: 14px;
+}
+
+.thongke-content .quay-thu table.kqmb .txt-giai {
+  width: 62px;
+  background: #f7e9be;
+  color: #000;
+  font-weight: 700;
+}
+
+.thongke-content .quay-thu table.kqmb .v-giai {
+  color: #001632;
+  font-weight: 700;
+}
+
+.thongke-content .quay-thu table.kqmb .db .v-giai {
+  color: #e04400;
+  font-size: 22px;
+}
+
+.thongke-content .quay-thu table.kqmb .v-giai span {
+  display: inline-block;
+  min-width: 58px;
+  margin: 2px 5px;
+}
+
+/* Keep trial result layout stable when switching to province pages (kqtinh). */
+.thongke-content .quay-thu .one-city table.kqmb.kqtinh {
+  width: 100%;
+  table-layout: auto;
+}
+
+.thongke-content .quay-thu .one-city table.kqmb.kqtinh thead {
+  display: none;
+}
+
+.thongke-content .quay-thu .one-city table.kqmb td.txt-giai,
+.thongke-content .quay-thu .one-city table.kqmb.kqtinh td.txt-giai {
+  width: 62px !important;
+  min-width: 62px;
+  max-width: 62px;
+  white-space: nowrap;
+}
+
+.thongke-content .quay-thu .one-city table.kqmb td.v-giai,
+.thongke-content .quay-thu .one-city table.kqmb.kqtinh td.v-giai {
+  width: auto !important;
+  text-align: center;
+}
+
+.thongke-content .quay-thu table.kqmb .v-giai span.trial-rolling {
+  position: relative;
+  min-width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+.thongke-content .quay-thu table.kqmb .v-giai span.trial-rolling::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #ffd9a6;
+  border-top-color: #ff9900;
+  border-radius: 50%;
+  animation: trial-spin 0.65s linear infinite;
+}
+
+@keyframes trial-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thongke-content .quay-thu .control-panel {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 9px;
+  border-top: 1px solid #e4e4e4;
+  background: #fff;
+}
+
+.thongke-content .quay-thu .digits-form {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.thongke-content .quay-thu .digits-form input {
+  display: none;
+}
+
+.thongke-content .quay-thu .digits-form label {
+  min-height: 24px;
+  padding: 3px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.thongke-content .quay-thu .digits-form label.active {
+  border-color: #d94b00;
+  background: #d94b00;
+  color: #fff;
+}
+
+.thongke-content .quay-thu .speaker-icon {
+  display: none;
+}
+
+.thongke-content .quay-thu [data-id="dd"] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #d94b00;
+}
+
+.thongke-content .quay-thu [data-id="dd"] table {
+  width: 100%;
+}
+
+.thongke-content .quay-thu [data-id="dd"] th {
+  background: #f7e9be;
+}
+
+.thongke-content .quay-thu [data-id="dd"] td {
+  padding: 5px 8px !important;
+}
+
+.thongke-content .quay-thu + .dspnone {
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #d94b00;
+  background: #fff;
+}
+
+.thongke-content .quay-thu + .dspnone .title-bor {
+  margin: 0;
+  padding: 9px 10px;
+  background: #f7e9be;
+  border-bottom: 1px solid #e4e4e4;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.thongke-content .quay-thu + .dspnone .list-unstyle {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thongke-content .quay-thu + .dspnone .list-unstyle li {
+  min-height: 31px;
+  padding: 7px 8px;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  text-align: center;
+  font-size: 13px;
+}
+
+.thongke-content .quay-thu + .dspnone .list-unstyle li:nth-child(5n) {
+  border-right: none;
+}
+
+.thongke-content .quay-thu + .dspnone .clred {
+  color: #e04400;
+}
+
+/* Trial Vietlott page */
+.thongke-content .mega645.box {
+  margin: 0 0 14px;
+  border: 1px solid #d94b00;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.thongke-content .mega645.box > .mega-title,
+.thongke-content .mega645.box > .power-title,
+.thongke-content .mega645.box > .max3d-title,
+.thongke-content .mega645.box > .max3dpro-title {
+  margin: 0;
+  padding: 9px 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: none;
+}
+
+.thongke-content .mega645.box > .mega-title {
+  background: #0059a9;
+}
+
+.thongke-content .mega645.power655.box > .power-title {
+  background: #d94b00;
+}
+
+.thongke-content .mega645.box > .max3d-title {
+  background: #b80598;
+}
+
+.thongke-content .mega645.box > .max3dpro-title {
+  background: #5527a8;
+}
+
+.thongke-content .mega645.box .vietlott-link,
+.thongke-content .mega645.box .vietlott-link span {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.thongke-content .mega645.box .box-html {
+  padding: 6px 10px;
+  border-bottom: 1px solid #e6e6e6;
+  color: #1f1f1f;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.thongke-content .mega645.box .txt-center.pad10 {
+  padding: 8px 10px;
+}
+
+.thongke-content .mega645.box .btn.btn-danger {
+  min-width: 110px;
+  height: 32px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 3px;
+  background: #d94b00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.thongke-content .mega645.box .results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thongke-content .mega645.box .results > li {
+  padding: 0;
+}
+
+.thongke-content .mega645.box table.data {
+  margin: 0;
+  border: none;
+}
+
+.thongke-content .mega645.box table.data td {
+  border: none;
+  padding: 8px 4px;
+}
+
+.thongke-content .mega645.box table.data p {
+  margin: 0;
+  font-size: 22px;
+  color: #303030;
+}
+
+.thongke-content .mega645.box table.data p strong {
+  color: #222;
+}
+
+.thongke-content .mega645.box table.data td i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 2px 5px;
+  border-radius: 50%;
+  background: #d82b2b;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.thongke-content .mega645.box table.data td i.imgloadig {
+  position: relative;
+  background: #ffe4c6;
+}
+
+.thongke-content .mega645.box table.data td i.imgloadig::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffd2a0;
+  border-top-color: #cf4f00;
+  border-radius: 50%;
+  animation: trial-spin 0.65s linear infinite;
+}
+
+.thongke-content .mega645.power655.box table.data td i {
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0, #ffe486 100%);
+  border: 2px solid #cf4f00;
+  color: #222;
+}
+
+.thongke-content .mega645.power655.box table.data td:last-child i {
+  background: #cf4f00;
+  color: #fff;
+}
+
+.thongke-content .mega645.box table.data2 {
+  margin: 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.thongke-content .mega645.box table.data2 td {
+  padding: 10px 8px !important;
+  font-size: 14px;
+}
+
+.thongke-content .mega645.box table.data2 tr.header td {
+  background: #f7e9be;
+  color: #1f1f1f;
+  font-weight: 700;
+}
+
+.thongke-content .mega645.box table.data2 td i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background: #d82b2b;
+  vertical-align: middle;
+}
+
+.thongke-content .mega645.power655.box table.data2 td i {
+  background: #cf4f00;
+}
+
+.thongke-content .mega645.power655.box table.data2 td i.clred {
+  background: transparent;
+  border: 2px solid #cf4f00;
+}
+
+.thongke-content .mega645.box table.data2 .clred {
+  color: #cf4f00;
+  font-weight: 700;
+}
+
+.thongke-content .see-more {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  background: #fffaf0;
+}
+
+.thongke-content .see-more ul,
+.thongke-content ul.see-more,
+.thongke-content .list-html-link {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thongke-content .see-more li,
+.thongke-content .list-html-link li {
+  min-width: 0;
+}
+
+.thongke-content .see-more a,
+.thongke-content .list-html-link a {
+  display: block;
+  padding: 7px 9px;
+  border: 1px solid #eadca9;
+  background: #fff;
+  color: #0059a9;
+  font-size: 13px;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.thongke-content .see-more a:hover,
+.thongke-content .list-html-link a:hover {
+  color: #d94b00;
+}
+
+.thongke-content .link-hay,
+.thongke-content .box-html.gray-bg {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+}
+
+.thongke-content .link-hay .list_view,
+.thongke-content .list_view {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thongke-content .link-hay .list_view li,
+.thongke-content .list_view li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ededed;
+}
+
+.thongke-content .link-hay .list_view li:last-child,
+.thongke-content .list_view li:last-child {
+  border-bottom: none;
+}
+
+.thongke-content .d-flex-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.thongke-content .flex-1 {
+  flex: 0 0 82px;
+}
+
+.thongke-content .flex-3 {
+  flex: 1;
+  min-width: 0;
+}
+
+.thongke-content .list_view img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border: 1px solid #e4e4e4;
+}
+
+.thongke-content .list_view h3 {
+  margin: 0 0 5px;
+  color: #0059a9;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.thongke-content .list_view p {
+  margin: 0;
+  color: #444;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.thongke-content .box-html.gray-bg {
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.thongke-content .box-html.gray-bg p {
+  margin: 0 0 9px;
+}
+
+.thongke-content .box-html.gray-bg h2,
+.thongke-content .box-html.gray-bg h3 {
+  margin: 12px 0 7px;
+  color: #d94b00;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.thongke-content .box-html.gray-bg a {
+  color: #0059a9;
+  text-decoration: none;
+}
+
+.thongke-content .box-html.gray-bg a:hover {
+  color: #d94b00;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .thongke-content:has(form#statistic-form[action*="lo-gan"]) .statistic-menu {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .thongke-content:has(form#statistic-form[action*="lo-gan"]) .loto-gan-control-row {
+    justify-content: center;
+  }
+
+  .thongke-content .quay-thu [data-id="dd"] {
+    grid-template-columns: 1fr;
+  }
+
+  .thongke-content .quay-thu + .dspnone .list-unstyle,
+  .thongke-content .see-more ul,
+  .thongke-content ul.see-more,
+  .thongke-content .list-html-link {
+    grid-template-columns: 1fr;
+  }
+
+  .thongke-content .d-flex-row {
+    align-items: stretch;
+  }
+
+  .thongke-content .mega645.box > .mega-title,
+  .thongke-content .mega645.box > .power-title,
+  .thongke-content .mega645.box > .max3d-title,
+  .thongke-content .mega645.box > .max3dpro-title {
+    font-size: 15px;
+  }
+
+  .thongke-content .mega645.box table.data td i {
+    width: 34px;
+    height: 34px;
+    margin: 2px 3px;
+    font-size: 17px;
+  }
+}
+
+/* ─── Custom Filter Bar (React) ─── */
+.tk-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0;
+}
+
+.tk-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.tk-toggle:hover {
+  border-color: #cf4f00;
+  background: #fffcf9;
+}
+
+.tk-toggle.active {
+  border-color: #cf4f00;
+  background: #fff8f4;
+  color: #cf4f00;
+}
+
+.tk-switch {
+  width: 34px;
+  height: 18px;
+  background: #e0e0e0;
+  border-radius: 18px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.tk-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: left 0.3s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tk-toggle.active .tk-switch {
+  background: #cf4f00;
+}
+
+.tk-toggle.active .tk-knob {
+  left: 18px;
+}
+
+/* Ensure the content looks clean */
+.thongke-content .s16.bold {
+  display: inline-block;
+  min-width: 20px;
+}
+
+.thongke-content td {
+  transition: background-color 0.2s;
+  padding: 8px 4px !important;
+}
+
+/* Preserve original xsmn.mobi look for result pages (xsmn/xsmb/xsmt by day). */
+.thongke-page.thongke-origin-result .pt-header {
+  display: none;
+}
+
+.thongke-page.thongke-origin-result .thongke-content {
+  background: #fff;
+  color: #333;
+}
+
+.thongke-page.thongke-origin-result .thongke-content .box {
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  overflow: auto;
+  background: #fff;
+}
+
+.thongke-page.thongke-origin-result .thongke-content ul.tab-panel {
+  background: #cf4f01;
+  border-bottom: 0;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.thongke-page.thongke-origin-result .thongke-content ul.tab-panel li {
+  flex: 0 0 auto;
+  border-right: 0;
+}
+
+.thongke-page.thongke-origin-result .thongke-content ul.tab-panel li a {
+  color: #fff;
+  line-height: 38px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.thongke-page.thongke-origin-result .thongke-content ul.tab-panel li.active,
+.thongke-page.thongke-origin-result .thongke-content ul.tab-panel li:not(.active):hover {
+  background: #ff8a2c;
+}
+
+.thongke-page.thongke-origin-result .thongke-content .title-bor-c1 {
+  background: #cf4f00;
+  color: #fff;
+  line-height: 23px;
+  padding: 7px 3px;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.thongke-page.thongke-origin-result .thongke-content .title-bor {
+  background: #f7e9be;
+  color: #0a0909;
+  line-height: 23px;
+  padding: 7px 3px;
+  font-size: 16px;
+}
+
+.thongke-page.thongke-origin-result .thongke-content table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.thongke-page.thongke-origin-result .thongke-content table th {
+  background: linear-gradient(to bottom, #fafafa, #eee);
+  color: #333;
+  padding: 5px;
+  border: 1px solid #e4e4e4;
+}
+
+.thongke-page.thongke-origin-result .thongke-content table td {
+  padding: 4px 0 !important;
+  border: 1px solid #e4e4e4;
+  font-size: 16px;
+  background: #fff;
+}
+
+/* Hide unwanted breadcrumbs or navigation links from scraped content */
+.thongke-content .breakum,
+.thongke-content .breadcrumb,
+.thongke-content .path,
+.thongke-content .location,
+.thongke-content .hot-links {
+  display: none !important;
+}

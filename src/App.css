@@ -1,0 +1,1576 @@
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+:root {
+  --color-primary: #CF4F00;
+  --color-secondary: #ff8a2c;
+  --color-link: #0059A9;
+  --color-gray: #888;
+  --color-light: #fff2bc;
+  --color-dark: #333333;
+  --color-white: #fff;
+  --highlight-bg: #F0FF7B;
+  
+  --bg-color: #ffffff;
+  --text-main: #333;
+  --border-color: #e4e4e4;
+  --box-bg: #ffffff;
+  
+  --table-header-bg: #CF4F00; 
+  --table-header-text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove 300ms tap delay on all interactive elements */
+a, button, [onClick], .logo, .nav-menu li, .day-tabs li,
+.digit-btn, .widget-list li, .tinh-list li, .tt-tab,
+.mobile-menu-row, .mobile-submenu li, .has-dropdown span {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.xsmn-app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ─── CONTAINER ─── */
+.xsmn-container {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* ─── NAV INNER ─── */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ─── TOP HEADER ─── */
+.xsmn-header {
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logo span {
+  font-size: 20px;
+  color: #555;
+  font-weight: 400;
+}
+
+.header-right span {
+  font-size: 13px;
+  color: var(--color-gray);
+  font-style: italic;
+}
+
+/* ─── NAVIGATION BAR WITH DROPDOWNS ─── */
+.xsmn-nav {
+  background-color: var(--color-primary);
+  min-height: 38px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 50;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.nav-menu > li {
+  padding: 0;
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 13px;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 38px;
+  overflow: visible;
+}
+
+.nav-menu > li > span {
+  display: block;
+  padding: 0 10px;
+  height: 38px;
+  line-height: 38px;
+}
+
+.nav-menu > li:hover, .nav-menu > li.active {
+  background-color: var(--color-secondary);
+}
+
+/* Dropdown Menu CSS */
+.has-dropdown .dropdown {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: #f7e9be; /* xsmn.mobi dropdown background */
+  min-width: 220px;
+  border: 1px solid var(--color-secondary);
+  border-top: none;
+  box-shadow: 0 3px 2px 0 #ccc;
+  display: none;
+  z-index: 99;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 8px 10px;
+  color: #000;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.dropdown li:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* ─── MAIN LAYOUT ─── */
+.xsmn-main {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: var(--color-link);
+}
+
+.breadcrumb span {
+  color: var(--text-main);
+}
+
+.xsmn-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.xsmn-content {
+  flex: 1 1 500px;
+  min-width: 0;
+  background: var(--box-bg);
+}
+
+.xsmn-sidebar {
+  width: 336px;
+  flex: 0 1 336px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ─── CONTENT AREA ─── */
+.hot-links {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.hot-link {
+  color: var(--color-primary);
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hot-badge {
+  background-color: #f7e9be;
+  color: red;
+  font-size: 10px;
+  padding: 1px 3px;
+  border: 1px solid red;
+  margin-right: 5px;
+}
+
+.day-tabs {
+  display: flex;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.day-tabs li {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #333;
+  border-right: 1px solid #ddd;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+.day-tabs li:last-child {
+  border-right: none;
+}
+
+.day-tabs li:hover {
+  background-color: #e5e5e5;
+}
+
+.day-tabs li.active {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: bold;
+}
+
+.table-header-title {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.table-header-breadcrumb {
+  background: var(--color-light); /* #fff2bc */
+  color: var(--color-primary);
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.page-title {
+  display: none; /* Replaced by hot links and tabs */
+}
+
+.results-container {
+  min-height: 400px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.seo-text {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ─── LOADING ─── */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #666;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #ddd;
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  padding: 20px;
+  background: #fff5d5;
+  color: var(--color-primary);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ─── SIDEBAR WIDGETS ─── */
+.widget {
+  background: var(--box-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 #ccc;
+}
+
+.widget-title {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 7px 3px;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Sidebar tinh block title */
+.sidebar-tinh-title {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.widget-list {
+  padding: 10px;
+}
+
+.widget-list li {
+  padding: 8px 5px;
+  cursor: pointer;
+  color: var(--color-link);
+  position: relative;
+  padding-left: 15px;
+}
+
+.widget-list li::before {
+  content: '›';
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray);
+  font-size: 16px;
+}
+
+.widget-list li:hover {
+  text-decoration: underline;
+  color: #f30;
+}
+
+.columns-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columns-2 li {
+  width: 50%;
+}
+
+/* ─── OVERRIDE MINH NGỌC RAW HTML TO LOOK LIKE XSMN.MOBI ─── */
+.minhngoc-raw-data {
+  width: 100%;
+}
+
+/* Hide unwanted elements from raw html */
+.minhngoc-raw-data .tieude, 
+.minhngoc-raw-data script, 
+.minhngoc-raw-data noscript,
+.minhngoc-raw-data .banner_ads,
+.minhngoc-raw-data .thong_tin_kqxs,
+.minhngoc-raw-data .bo-sung-thong-tin,
+.minhngoc-raw-data .top,
+.minhngoc-raw-data .control_panel,
+.minhngoc-raw-data .ngay,
+.minhngoc-raw-data .matinh,
+.minhngoc-raw-data .date {
+  display: none !important;
+}
+
+/* Layout for table boxes */
+.minhngoc-raw-data .box_kqxs {
+  margin-bottom: 20px;
+}
+
+/* Hide original Minh Ngoc title to use our custom one */
+.minhngoc-raw-data .box_kqxs > .title,
+.minhngoc-raw-data > .title,
+.minhngoc-raw-data .kqxs_wrap > .title {
+  display: none !important;
+}
+
+.minhngoc-raw-data .tinh_kqxs {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 7px 3px !important;
+  text-align: center;
+}
+
+.minhngoc-raw-data table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  text-align: center;
+  border: none !important;
+}
+
+/* Remove paddings, borders, and vertical alignment issues from outer wrapper tables */
+.minhngoc-raw-data > table > tbody > tr > td,
+.minhngoc-raw-data table[class*="bkq"] > tbody > tr > td,
+.minhngoc-raw-data table:not(.leftcl):not(.rightcl):not(.bang_loto) > tbody > tr > td {
+  padding: 0 !important;
+  border: none !important;
+  vertical-align: top !important;
+}
+
+/* Add paddings and borders ONLY to the inner columns */
+.minhngoc-raw-data table.leftcl td,
+.minhngoc-raw-data table.rightcl td,
+.minhngoc-raw-data table.tb_kqxs td {
+  padding: 8px 4px !important;
+  border: 1px solid var(--border-color) !important;
+  vertical-align: middle !important;
+}
+
+/* Prize Names Column (Left) */
+.minhngoc-raw-data .giai_name,
+.minhngoc-raw-data .t_giai,
+.minhngoc-raw-data .leftcl td {
+  width: 70px !important;
+  color: #333 !important;
+  background-color: #fafafa !important;
+  font-weight: normal !important;
+  text-align: center !important;
+  font-size: 15px !important;
+}
+
+/* Prize Numbers */
+.minhngoc-raw-data .so_giai,
+.minhngoc-raw-data div[class*="giai"],
+.minhngoc-raw-data .rightcl td div {
+  font-size: 18px !important;
+  font-weight: bold;
+  color: #333 !important;
+  line-height: 1.5;
+}
+
+/* Special Prize (Giải ĐB) and G8 - Highlight in Orange */
+.minhngoc-raw-data .giaiDB,
+.minhngoc-raw-data div[class*="giaiDB"],
+.minhngoc-raw-data .so_giai.giaiDB,
+.minhngoc-raw-data .rightcl td.giaidb div,
+.minhngoc-raw-data .rightcl td.giai8 div {
+  color: var(--color-primary) !important;
+  font-size: 26px !important;
+}
+
+/* Loto Header styling matching image */
+.minhngoc-raw-data table.bang_loto,
+.minhngoc-raw-data .bang_loto {
+  margin-top: 20px !important;
+  border-top: 2px solid var(--color-primary) !important;
+}
+
+.minhngoc-raw-data .bang_loto th,
+.minhngoc-raw-data .bang_loto td.cltitle {
+  background-color: #f7e9be !important;
+  color: #333 !important;
+  font-weight: bold !important;
+}
+
+.minhngoc-raw-data .bang_loto td:first-child,
+.minhngoc-raw-data .bang_loto td.clnote {
+  color: red !important;
+  font-weight: bold !important;
+  background-color: #fafafa !important;
+}
+
+/* ─── CONTROL PANEL (BỘ LỌC) ─── */
+.xsmn-control-panel {
+  border-top: 1px solid #ccc;
+  background: #fff;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.control-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.radio-group label {
+  margin-right: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+  accent-color: var(--color-primary);
+}
+
+.sound-icon {
+  color: #555;
+  cursor: pointer;
+}
+
+.control-bottom {
+  display: flex;
+  background: #f5f5f5;
+}
+
+.digit-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.digit-btn:last-child {
+  border-right: none;
+}
+
+.digit-btn:hover {
+  background: #e9e9e9;
+}
+
+.digit-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Highlight the last two digits without changing layout */
+.highlight-red {
+  color: var(--color-primary) !important;
+  font-weight: 800;
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Fix table headers (Province names row) */
+.minhngoc-raw-data table th,
+.minhngoc-raw-data .tinh,
+.minhngoc-raw-data .tinh_kqxs {
+  background-color: #fafafa !important;
+  color: var(--color-link) !important;
+  text-align: center;
+  padding: 8px !important;
+  border: 1px solid var(--border-color) !important;
+  font-weight: bold;
+}
+
+.minhngoc-raw-data .tinh a,
+.minhngoc-raw-data .tinh_kqxs a {
+  color: var(--color-link) !important;
+}
+
+/* Ngay thang nam - Date section */
+.minhngoc-raw-data .ngay,
+.minhngoc-raw-data .date {
+  color: #ffff00 !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
+
+/* ─── FOOTER ─── */
+.xsmn-footer {
+  background-color: #efefef;
+  color: #333;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.xsmn-footer p {
+  margin-bottom: 5px;
+}
+
+/* ─── DANH SÁCH TỈNH (dùng trong sidebar) ─── */
+
+.tinh-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  color: var(--color-primary);
+  border-radius: 50%;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.tinh-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 14px;
+  gap: 0;
+}
+
+.tinh-list li {
+  padding: 6px 4px 6px 18px;
+  cursor: pointer;
+  color: var(--color-link);
+  font-size: 14px;
+  position: relative;
+  list-style: none;
+}
+
+.tinh-list li::before {
+  content: '•';
+  position: absolute;
+  left: 4px;
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.tinh-list li:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* ─── RESPONSIVE ─── */
+
+/* Numbers styling for Mega & Power */
+.vietlott-box table.data td {
+  border: none;
+}
+.vietlott-box table.data td i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-style: normal;
+  margin: 4px;
+  font-size: 18px;
+}
+/* Mega balls */
+.mega-title ~ .results table.data td i {
+  background: #d82b2b;
+}
+/* Power balls */
+.power-title ~ .results table.data td i {
+  background: #fff;
+  color: #000;
+  border: 2px solid #cf4f00;
+}
+/* Special Power ball */
+.power-title ~ .results table.data td:last-child i {
+  background: #cf4f00;
+  color: #fff;
+}
+.vietlott-box table.data2 td i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d82b2b;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+.vietlott-box table.data2 td i.clred {
+  background: transparent;
+  border: 2px solid #cf4f00;
+}
+
+/* ─── HAMBURGER BUTTON ─── */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ─── MOBILE MENU OVERLAY ─── */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+  padding: 10px 14px;
+}
+
+.mobile-menu-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mobile-menu-logo span {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-list {
+  padding: 0;
+}
+
+.mobile-menu-item {
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  min-height: 48px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.mobile-menu-row:hover {
+  background: #f7e9be;
+}
+
+.mobile-arrow {
+  font-size: 20px;
+  color: var(--color-gray);
+  transition: transform 0.2s;
+  line-height: 1;
+}
+
+.mobile-arrow.open {
+  transform: rotate(90deg);
+}
+
+.mobile-submenu {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.mobile-submenu li {
+  padding: 12px 24px;
+  font-size: 13px;
+  color: var(--color-link);
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-submenu li:hover {
+  background: #fff;
+  color: var(--color-primary);
+}
+
+/* ─── TABLE SCROLL WRAPPER ─── */
+.table-scroll-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  /* Body */
+  body {
+    font-size: 13px;
+  }
+
+  /* Header */
+  .xsmn-header {
+    padding: 6px 0;
+  }
+
+  .header-inner {
+    padding: 0;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  /* Nav - hide desktop menu, show hamburger */
+  .nav-inner {
+    padding: 0 4px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* Main */
+  .xsmn-main {
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  /* Sidebar full width on mobile */
+  .xsmn-sidebar {
+    flex: 1 1 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  /* Day tabs - horizontal scroll */
+  .day-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
+
+  .day-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .day-tabs li {
+    flex: 0 0 auto;
+    min-width: 60px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+
+  /* Result table */
+  .kq-table {
+    min-width: 320px;
+  }
+
+  .kq-th-giai,
+  .kq-td-giai {
+    width: 48px;
+    font-size: 12px;
+    padding: 4px 2px;
+  }
+
+  .kq-td-num {
+    padding: 3px 2px;
+  }
+
+  .kq-num {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .kq-td-num.giaidb .kq-num {
+    font-size: 22px;
+  }
+
+  .kq-td-num.giai8 .kq-num {
+    font-size: 20px;
+  }
+
+  .kq-mb-num {
+    font-size: 15px !important;
+    padding: 4px 2px !important;
+  }
+
+  .kq-mb-num.giaidb .kq-num,
+  .kq-row-giaidb .kq-num {
+    font-size: 22px !important;
+  }
+
+  /* Control panel */
+  .digit-btn {
+    min-height: 44px;
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .radio-group label {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  /* Dau duoi table */
+  .dau-duoi-table {
+    font-size: 12px;
+    min-width: 400px;
+  }
+
+  .dau-duoi-table th,
+  .dau-cell,
+  .duoi-cell {
+    padding: 4px 6px;
+  }
+
+  /* Widget list touch targets */
+  .widget-list li {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Table header title smaller on mobile */
+  .table-header-title {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .table-header-breadcrumb {
+    font-size: 13px;
+    padding: 4px;
+  }
+}
+
+/* ─── STATS LOADING ─── */
+.stats-loading {
+  padding: 12px;
+  text-align: center;
+  color: var(--color-gray);
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* ─── BẢNG ĐẦU ĐUÔI ─── */
+.dau-duoi-section {
+  margin-top: 16px;
+  border: 1px solid #ccc;
+}
+
+.stats-title {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.dau-duoi-scroll {
+  overflow-x: auto;
+}
+
+.dau-duoi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: center;
+}
+
+.dau-duoi-table thead tr {
+  background: #f7e9be;
+}
+
+.dau-duoi-table th {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  color: #333;
+}
+
+.dau-duoi-table th.dau-col {
+  background: #f7e9be;
+  color: var(--color-primary);
+  font-weight: bold;
+  width: 50px;
+}
+
+.dau-duoi-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.dau-duoi-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.dau-cell {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  color: var(--color-primary);
+  background: #f7e9be !important;
+  width: 50px;
+}
+
+.duoi-cell {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* ─── THỐNG KÊ NHANH ─── */
+.thong-ke-nhanh-section {
+  margin-top: 16px;
+  border: 1px solid #ccc;
+}
+
+.tk-sub-title {
+  background: #f7e9be;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tk-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.tk-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.tk-item:nth-child(5n) {
+  border-right: none;
+}
+
+.tk-so {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.tk-count {
+  color: #333;
+  font-size: 13px;
+}
+
+/* ─── KẾT QUẢ TABLE (React-rendered) ─── */
+.kq-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+ /* Numbers styling for Max 3D */
+.vietlott-box .number strong {
+  font-size: 20px;
+  color: #CF4F00;
+  letter-spacing: 2px;
+  margin: 2px;
+}
+.max3d-title ~ div .number strong {
+  color: #b80598;
+}
+.max3dpro-title ~ div .number strong {
+  color: #5527a8;
+}
+.vietlott-box .txt-giai, .vietlott-box b {
+  color: #333;
+}
+.vietlott-box .see-more {
+  text-align: left;
+  padding: 5px 10px;
+  background: transparent;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.kq-th-giai {
+  width: 60px;
+  background: #fafafa;
+  border: 1px solid var(--border-color);
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+}
+
+.kq-th-tinh {
+  background: #fafafa;
+  border: 1px solid var(--border-color);
+  padding: 8px 4px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-link);
+  font-size: 14px;
+}
+
+.kq-td-giai {
+  width: 60px;
+  background: #fafafa;
+  border: 1px solid var(--border-color);
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.kq-td-num {
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.kq-num {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Giải ĐB và G8 màu cam, to hơn */
+.kq-td-num.giaidb .kq-num,
+.kq-td-num.giai8 .kq-num {
+  color: var(--color-primary);
+  font-size: 26px;
+}
+
+.kq-td-num.giaidb .kq-num {
+  font-size: 30px;
+}
+
+/* ─── XSMB TABLE ─── */
+.kq-mb-table {
+  table-layout: fixed;
+}
+
+.kq-mb-num {
+  font-size: 20px !important;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 4px !important;
+}
+
+.kq-mb-num.giaidb .kq-num,
+.kq-row-giaidb .kq-num {
+  color: var(--color-primary) !important;
+  font-size: 28px !important;
+}
+
+.kq-mb-num.giai7 .kq-num,
+.kq-row-giai7 .kq-num {
+  color: var(--color-primary) !important;
+  font-size: 22px !important;
+}
+
+/* ─── TRỰC TIẾP PAGE ─── */
+.truc-tiep-page {
+  width: 100%;
+}
+
+.tt-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-primary);
+  background: #f1f1f1;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.tt-tab {
+  flex: 1;
+  padding: 10px 6px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  border-right: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.tt-tab:last-child {
+  border-right: none;
+}
+
+.tt-tab-label {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+  text-decoration: underline;
+}
+
+.tt-tab.active {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.tt-tab:not(.active):not(.tt-tab-label):hover {
+  background: #e5e5e5;
+}
+
+.tt-header {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.tt-subheader {
+  background: var(--color-light);
+  color: var(--color-primary);
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.tt-table-wrap {
+  position: relative;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  min-height: 300px;
+}
+
+/* Wrapper that gets blurred */
+.tt-content {
+  position: relative;
+}
+
+.tt-content.tt-blurred > .table-scroll-wrap {
+  filter: blur(4px);
+  opacity: 0.45;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Countdown overlay — centered over blurred table */
+.tt-countdown-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tt-countdown-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 24px 32px;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.tt-countdown-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.tt-countdown-digits {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tt-digit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.tt-digit-block span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+}
+
+.tt-digit-block label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+}
+
+.tt-colon {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.tt-pending {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.tt-table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tt-digit-block span {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .tt-countdown-box {
+    padding: 16px 20px;
+  }
+
+  .tt-countdown-label {
+    font-size: 14px;
+  }
+
+  .tt-tab {
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+}
+
+/* ─── PHÂN TÍCH PAGE ─── */
+.phan-tich-page {
+  width: 100%;
+}
+
+.pt-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-primary);
+  background: #f1f1f1;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.pt-tab {
+  flex: 1;
+  padding: 10px 6px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  border-right: 1px solid #ddd;
+  white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pt-tab:last-child { border-right: none; }
+
+.pt-tab.active {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.pt-tab:not(.active):hover { background: #e5e5e5; }
+
+.pt-header {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 12px;
+}
+
+.pt-header span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pt-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+.pt-item {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.pt-item:last-child { border-bottom: none; }
+
+.pt-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.pt-title:hover { color: var(--color-primary); text-decoration: underline; }
+
+.pt-body {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.pt-thumb {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 4px;
+  display: block;
+}
+
+.pt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pt-excerpt {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .pt-tab { font-size: 11px; padding: 8px 4px; }
+  .pt-thumb { width: 90px; height: 90px; }
+  .pt-title { font-size: 14px; }
+}
+
+.pt-tinh-section {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
